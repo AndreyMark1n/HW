@@ -1,3 +1,4 @@
+
 let exchange = (arr, index1, index2) => {
     let buffer = arr[index1];
     arr[index1] = arr[index2];
@@ -5,15 +6,20 @@ let exchange = (arr, index1, index2) => {
     return arr
 };
 
+
 let sortBubble = (arr) => {
-    for (let i = 1; i < arr.length - 1; i++) {
-        for (let j=1; j<i; j++)
-        if (arr[j] < arr[j - 1]) exchange(arr, i, i - 1)
-    }
+
+    
+    let notClearinteration = true;
+
+    while (notClearinteration) {
+        for (let i = 1; i < arr.length - 1; i++) {
+            if (arr[j] < arr[j - 1]) exchange(arr, i, i - 1)
+        }
 
 
     return arr;
 }
 
 
-document.write(sortBubble(arr[22, 32, 55, 2, 0, 33]));
+document.write(sortBubble(arr[22, 32, 55, 2, 33]));
