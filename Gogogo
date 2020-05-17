@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gogogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p><b>Поехали?</b><br>
+<input type="text" id= "txt" size="14"> <br>
+    <input type="button" id="btn" value="ПОЕХАЛИ!" onclick="getCountDiv()">
+    <div class = 'myDiv' id="div1">Блок</div>
+<script>
+    function getCountDiv() {
+        let countDiv=(document.getElementById("txt").value);
+        viewDiv();
+    }
+
+    function viewDiv() {
+        document.getElementById("div1").style.display = "inline-block";
+
+    }
+    //document.getElementById("btn").onclick = go();
+
+    https://qna.habr.com/q/702186 <- решение тут
+
+
+    </script>
+</body>
+</html>
+
+<!--
+ТЗ:
+- форма, состоит из поля ввода и кнопки "поехали"
+- в поле ввода вводится чиселка.
+- при нажатии кнопки мы отрисовываем маленький красный
+div с закругленными радиусом в 4 пикселя уголками, столько раз,
+сколько написано в поле ввода
+- при повторном нажатии ранее отрисованные дивы надо удалить и
+снова отрисовать столько, сколько написано в поле ввода-->
