@@ -1,25 +1,29 @@
+    let arr2 = [5, 4, 3, 2, 1, 0];
 
-let exchange = (arr, index1, index2) => {
-    let buffer = arr[index1];
-    arr[index1] = arr[index2];
-    arr[index2] = buffer;
-    return arr
-};
-
-
-let sortBubble = (arr) => {
-
+    let exchange = (arr1, index1, index2) => {
+        let buffer = arr1[index1];
+        arr1[index1] = arr1[index2];
+        arr1[index2] = buffer;
+        return arr1
+    };
     
-    let notClearinteration = true;
+    let sortBubble = (arr) => {
+        let isExchangeExist;
 
-    while (notClearinteration) {
-        for (let i = 1; i < arr.length - 1; i++) {
-            if (arr[j] < arr[j - 1]) exchange(arr, i, i - 1)
-        }
+        do {
+            isExchangeExist = false;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    exchange(arr, arr[i], arr[i + 1]);
+                    isExchangeExist = true;
 
+                    console.log(isExchangeExist);
+                }
+            }
+        }while(isExchangeExist);
 
-    return arr;
-}
+            return arr;
 
+    }
 
-document.write(sortBubble(arr[22, 32, 55, 2, 33]));
+console.log(sortBubble(arr2));
