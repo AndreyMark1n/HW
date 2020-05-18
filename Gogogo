@@ -7,29 +7,31 @@
 </head>
 <body>
 <p><b>Поехали?</b><br>
-<input type="text" id= "txt" size="14"> <br>
+<input type="text" id="txt" size="14"> <br>
     <input type="button" id="btn" value="ПОЕХАЛИ!" onclick="getCountDiv()">
-    <div class = 'myDiv' id="div1">Блок</div>
+    <!--<div class = 'field' id="div1">Блок</div>-->
 <script>
+
+
+
     function getCountDiv() {
-        let countDiv=(document.getElementById("txt").value);
-        viewDiv();
+        let countDiv = (document.getElementById("txt").value);
+        //alert(countDiv);
+        for (let i = 0; i < countDiv; i++) {
+            let div = document.createElement('div');
+            div.className = "alert";
+            div.innerHTML = "div";
+            document.body.append(div);
+        }
     }
-
-    function viewDiv() {
-        document.getElementById("div1").style.display = "inline-block";
-
-    }
-    //document.getElementById("btn").onclick = go();
-
-    https://qna.habr.com/q/702186 <- решение тут
 
 
     </script>
 </body>
 </html>
 
-<!--
+https://qna.habr.com/q/702186 <- решение тут
+
 ТЗ:
 - форма, состоит из поля ввода и кнопки "поехали"
 - в поле ввода вводится чиселка.
