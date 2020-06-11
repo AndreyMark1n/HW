@@ -10,18 +10,21 @@
 <input type="text" id="txt" size="14"> <br>
     <input type="button" id="btn" value="ПОЕХАЛИ!" onclick="getCountDiv()">
     <!--<div class = 'field' id="div1">Блок</div>-->
+<div id = "container"></div>
 <script>
 
 
 
     function getCountDiv() {
         let countDiv = (document.getElementById("txt").value);
+        const container = document.getElementById("container");
         //alert(countDiv);
         for (let i = 0; i < countDiv; i++) {
+            container.innerHtml = "";
             let div = document.createElement('div');
             div.className = "alert";
             div.innerHTML = "div";
-            document.body.append(div);
+            container.append(div);
         }
     }
 
