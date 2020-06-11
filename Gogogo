@@ -26,7 +26,7 @@
             let div = document.createElement('div');
             div.className = "alert";
             div.style="display:inline-block; width:30px; height:30px; margin:5px; padding:3px; border:solid 1px"
-            div.innerHTML = "div";
+            div.innerHTML = i;
             container.append(div);
         }
     }
